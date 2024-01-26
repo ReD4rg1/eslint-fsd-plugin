@@ -22,7 +22,7 @@ const ruleTester = new RuleTester({
 ruleTester.run("path-checker", rule, {
   valid: [
     {
-      filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\Article',
+      filename: 'C:\\Users\\d4rg1\\Desktop\\production_project\\src\\entities\\Article',
       code: "import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice'",
       errors: [],
     },
@@ -30,7 +30,7 @@ ruleTester.run("path-checker", rule, {
 
   invalid: [
     {
-      filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\Article',
+      filename: 'C:\\Users\\d4rg1\\Desktop\\production_project\\src\\entities\\Article',
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/model/slices/addCommentFormSlice'",
       errors: [{ message: "Wrong path! Within one layer, imports must be relative!"}],
       options: [
@@ -40,7 +40,7 @@ ruleTester.run("path-checker", rule, {
       ]
     },
     {
-      filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\Article',
+      filename: 'C:\\Users\\d4rg1\\Desktop\\production_project\\src\\entities\\Article',
       code: "import { addCommentFormActions, addCommentFormReducer } from 'entities/Article/model/slices/addCommentFormSlice'",
       errors: [{ message: "Wrong path! Within one layer, imports must be relative!"}],
     },
